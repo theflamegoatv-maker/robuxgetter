@@ -1,0 +1,68 @@
+:root{
+  --bg:#f0f0f0;
+  --card:#fff;
+  --green:#28a745;
+}
+body{
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  margin:0;
+  padding:50px;
+  text-align:center;
+  color:#111;
+}
+.container{
+  display:inline-block;
+  background:var(--card);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 6px 30px rgba(0,0,0,0.12);
+}
+input{
+  padding:10px 12px;
+  font-size:16px;
+  width:220px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  margin-right:8px;
+}
+button{
+  padding:10px 18px;
+  font-size:16px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+}
+.green-btn{
+  background:var(--green);
+  color:#fff;
+}
+.hidden{display:none;}
+.amount-buttons{margin-top:12px;}
+.amount-btn{margin:6px;padding:8px 12px;background:#e9e9e9;border-radius:6px;}
+#loading{margin-top:22px;font-weight:600;}
+#countdownText{margin-top:8px;font-weight:500;color:#555;}
+
+/* Rainbow redeem button */
+@keyframes rainbow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.rainbow-button{
+  background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+  background-size: 1400% 1400%;
+  animation: rainbow 6s ease infinite;
+  color:#fff;
+  padding:20px 40px;
+  font-size:1.6rem;
+  text-transform:uppercase;
+  font-weight:700;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.18);
+  border:none;
+  cursor:pointer;
+  transition:transform .15s ease;
+}
+.rainbow-button:hover{ transform:scale(1.05); }
+#redeemWrap{ margin-top:28px; }

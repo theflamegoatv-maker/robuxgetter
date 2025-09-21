@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Robux Getter</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Robux Getter</h1>
+
+    <!-- Step 1: Username -->
+    <div class="step" id="stepUsername">
+      <input type="text" id="username" placeholder="Enter your Roblox username" />
+      <button id="enterBtn" class="green-btn">Enter</button>
+    </div>
+
+    <!-- Step 2: Profile card -->
+    <div id="profileDiv" class="hidden step">
+      <h2 id="displayUsername"></h2>
+      <!-- placeholder avatar so we don't rely on external APIs -->
+      <img id="avatar" src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=150&height=150&format=png" alt="Avatar" width="150" height="150" />
+      <div><button id="getRobuxBtn" class="green-btn">GET ROBUX</button></div>
+
+      <!-- Step 3: Amount selection -->
+      <div id="amounts" class="hidden">
+        <p>Choose amount:</p>
+        <div class="amount-buttons">
+          <button class="amount-btn">100</button>
+          <button class="amount-btn">500</button>
+          <button class="amount-btn">800</button>
+          <button class="amount-btn">1000</button>
+          <button class="amount-btn">5000</button>
+          <button class="amount-btn">10000</button>
+          <button class="amount-btn">50000</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 4: Loading/messages -->
+  <div id="loading" class="hidden">
+    <p id="loadingText"></p>
+    <button id="thanksBtn" class="green-btn hidden">Thanks!</button>
+    <p id="countdownText" class="hidden"></p>
+  </div>
+
+  <!-- Step 5: Redeem button (appears after 10s) -->
+  <div id="redeemWrap" class="hidden">
+    <button id="redeemBtn" class="rainbow-button">REDEEM ROBUX NOW!</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
