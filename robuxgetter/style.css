@@ -1,19 +1,42 @@
 :root{
-  --bg:#f0f0f0;
-  --card:#fff;
   --green:#28a745;
 }
 body{
   font-family:Arial, sans-serif;
-  background:var(--bg);
   margin:0;
   padding:50px;
   text-align:center;
   color:#111;
+  overflow-x:hidden;
+  background:#111;
 }
+
+/* Background falling logos */
+#falling-background{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:-1;
+}
+.falling-logo{
+  position:absolute;
+  width:50px;
+  height:50px;
+  opacity:0.8;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  0% { transform: translateY(-60px) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* Container */
 .container{
   display:inline-block;
-  background:var(--card);
+  background:rgba(255,255,255,0.95);
   padding:28px;
   border-radius:12px;
   box-shadow:0 6px 30px rgba(0,0,0,0.12);
