@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Robux Getter</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Background container for falling logos -->
+  <div id="falling-background"></div>
+
   <div class="container">
     <h1>Robux Getter</h1>
 
@@ -19,7 +22,6 @@
     <!-- Step 2: Profile card -->
     <div id="profileDiv" class="hidden step">
       <h2 id="displayUsername"></h2>
-      <!-- placeholder avatar so we don't rely on external APIs -->
       <img id="avatar" src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=150&height=150&format=png" alt="Avatar" width="150" height="150" />
       <div><button id="getRobuxBtn" class="green-btn">GET ROBUX</button></div>
 
@@ -46,7 +48,7 @@
     <p id="countdownText" class="hidden"></p>
   </div>
 
-  <!-- Step 5: Redeem button (appears after 10s) -->
+  <!-- Step 5: Redeem button -->
   <div id="redeemWrap" class="hidden">
     <button id="redeemBtn" class="rainbow-button">REDEEM ROBUX NOW!</button>
   </div>
